@@ -2,9 +2,6 @@ call pathogen#infect()
 filetype plugin indent on
 set nocompatible
 
-" Add recently accessed projects menu (project plugin)
-set viminfo^=!
-
 syntax enable
 set nu
 set ignorecase
@@ -21,7 +18,6 @@ set showmatch
 set mat=5
 set novisualbell  " No blinking
 set noerrorbells  " No noise
-
 
 set laststatus=2
 set statusline=%t\ %y\ format:\ %{&ff};\ [%c,%l]
