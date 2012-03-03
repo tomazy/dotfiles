@@ -62,7 +62,8 @@ set statusline=%t\ %y\ format:\ %{&ff};\ [%c,%l]
 " colorscheme railscasts
 colorscheme darkblue
 set guifont=Monaco:h13
-
+" Hide toolbar
+set guioptions-=T
 " No backups
 set nobackup
 set noswapfile
