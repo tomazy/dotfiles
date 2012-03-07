@@ -59,11 +59,17 @@ set listchars=tab:▸\ ,eol:¬
 set laststatus=2
 set statusline=%t\ %y\ format:\ %{&ff};\ [%c,%l]
 
-if has('gui')
+if has('gui_running')
   colorscheme railscasts
 endif
 
-set guifont=Monaco:h13
+" Setup font depending on the OS
+if has('gui_macvim')
+  set guifont=Monaco:h13
+elseif has('gui_gnome')
+  set guifont=Monospace\ 11
+endif
+
 " Hide toolbar
 set guioptions-=T
 " No backups
