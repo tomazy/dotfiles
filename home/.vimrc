@@ -75,3 +75,11 @@ set guioptions-=T
 " No backups
 set nobackup
 set noswapfile
+
+
+" Highlight current line and column
+hi CursorLine cterm=underline guibg=Gray20
+hi CursorColumn ctermbg=0 guibg=Gray20
+set cursorline
+set cursorcolumn
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
