@@ -59,8 +59,10 @@ set listchars=tab:▸\ ,eol:¬
 set laststatus=2
 set statusline=%t\ %y\ format:\ %{&ff};\ [%c,%l]
 
-" colorscheme railscasts
-colorscheme darkblue
+if has('gui')
+  colorscheme railscasts
+endif
+
 set guifont=Monaco:h13
 " Hide toolbar
 set guioptions-=T
