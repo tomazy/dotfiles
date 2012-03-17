@@ -1,0 +1,12 @@
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[user]
+	name = Tomek Maszkowski
+	email = tomazy@go2.pl
+[alias]
+	st = status
+	co = checkout
+	br = branch -a
+	logx = log --graph --decorate --oneline
