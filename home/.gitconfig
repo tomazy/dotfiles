@@ -9,7 +9,7 @@
 	st = status -sb
 	co = checkout
 	br = branch -a
-	logx = log --graph --decorate --oneline
+	logx = log --graph --decorate --oneline --all
 [gui]
 	spellingdictionary = en
 [merge]
