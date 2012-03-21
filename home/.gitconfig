@@ -12,3 +12,7 @@
 	logx = log --graph --decorate --oneline
 [gui]
 	spellingdictionary = en
+[merge]
+	tool = vimdiff
+[mergetool]
+	keepbackup = false
