@@ -61,6 +61,8 @@ set statusline=%t\ %y\ format:\ %{&ff};\ [%c,%l]
 
 if has('gui_running')
   colorscheme railscasts
+else
+  colorscheme solarized
 endif
 
 " Setup font depending on the OS
