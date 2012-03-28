@@ -83,3 +83,13 @@ hi CursorColumn ctermbg=0 guibg=Gray20
 set cursorline
 set cursorcolumn
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+" NETRW options
+"  - vertical splitting for preview
+let g:netrw_preview = 1
+"  - "tree" listing style
+let g:netrw_liststyle = 3
+"  - dir listing width when preview is open
+let g:netrw_winsize = 20
+" netrw dir browse history
+let g:netrw_dirhistmax = 100
