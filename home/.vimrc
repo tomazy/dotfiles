@@ -95,3 +95,8 @@ let g:netrw_liststyle = 3
 let g:netrw_winsize = 20
 " netrw dir browse history
 let g:netrw_dirhistmax = 100
+
+" enable per-directory .vimrc files
+set exrc
+" disable unsafe commands in local .vimrc files
+set secure
