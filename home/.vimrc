@@ -100,3 +100,13 @@ let g:netrw_dirhistmax = 100
 set exrc
 " disable unsafe commands in local .vimrc files
 set secure
+
+
+" Strip trailing whitespace for code files on save
+function! StripTrailingWhitespace()
+  let save_cursor = getpos(".")
+  %s/\s\+$//e
+  call setpos('.', save_cursor)
+endfunction
+" Ruby, Rails
+autocmd BufWritePre *.rb,*.yml,*.js,*.css,*.less,*.sass,*.scss,*.html,*.xml,*.erb,*.haml call StripTrailingWhitespace()
