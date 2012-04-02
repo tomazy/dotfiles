@@ -59,11 +59,9 @@ set listchars=tab:▸\ ,eol:¬
 set laststatus=2
 set statusline=%t\ %y\ format:\ %{&ff};\ [%c,%l]
 
-if has('gui_running')
-  colorscheme railscasts
-else
-  colorscheme solarized
-endif
+" colors
+set background=dark
+colorscheme solarized
 
 " Setup font depending on the OS
 if has('gui_macvim')
