@@ -118,5 +118,4 @@ function! StripTrailingWhitespace()
   %s/\s\+$//e
   call setpos('.', save_cursor)
 endfunction
-" Ruby, Rails
-autocmd BufWritePre *.rb,*.yml,*.js,*.css,*.less,*.sass,*.scss,*.html,*.xml,*.erb,*.haml call StripTrailingWhitespace()
+autocmd FileType ruby,yaml,javascript,css,scss,haml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
