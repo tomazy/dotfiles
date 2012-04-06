@@ -110,6 +110,7 @@ set exrc
 " disable unsafe commands in local .vimrc files
 set secure
 
+autocmd BufNewFile,BufRead Gemfile,Rakefile,Guardfile  set filetype=ruby
 
 " Strip trailing whitespace for code files on save
 function! StripTrailingWhitespace()
