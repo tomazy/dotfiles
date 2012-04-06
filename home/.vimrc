@@ -71,7 +71,7 @@ set statusline+=[%c,%l]     "cursor column
 set statusline+=\ %P    "percent through file
 
 " colors
-set background=dark
+set background=light
 colorscheme solarized
 
 " Setup font depending on the OS
