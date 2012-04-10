@@ -4,3 +4,6 @@
 [submodule "home/.vim/bundle/vim-endwise"]
 	path = home/.vim/bundle/vim-endwise
 	url = git://github.com/tpope/vim-endwise.git
+[submodule "home/.vim/bundle/nerdtree"]
+	path = home/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git

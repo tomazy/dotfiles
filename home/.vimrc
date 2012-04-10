@@ -130,3 +130,6 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
+
+" toggle NERDTree
+nnoremap <leader>t :NERDTreeToggle<cr>
