@@ -22,6 +22,7 @@ set hidden
 
 syntax enable
 set number
+set numberwidth=2
 set autoindent
 set smarttab
 set expandtab
@@ -110,6 +111,7 @@ set exrc
 " disable unsafe commands in local .vimrc files
 set secure
 
+" Ruby files
 autocmd BufNewFile,BufRead Gemfile,Rakefile,Guardfile  set filetype=ruby
 
 " Strip trailing whitespace for code files on save
@@ -130,6 +132,10 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
+
+" flip the default split directions to sane ones
+set splitright
+set splitbelow
 
 " toggle NERDTree
 nnoremap <leader>t :NERDTreeToggle<cr>
