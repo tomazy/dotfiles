@@ -139,3 +139,6 @@ set splitbelow
 
 " toggle NERDTree
 nnoremap <leader>t :NERDTreeToggle<cr>
+
+" link unnamed register with the clipboard
+set clipboard=unnamed
