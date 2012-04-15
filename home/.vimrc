@@ -9,8 +9,6 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-" Detect file types
-filetype plugin indent on
 
 " Prevents some security exploits
 set modelines=0
@@ -20,22 +18,27 @@ set encoding=utf-8
 " Hide instad of closing - will not force writes
 set hidden
 
+" enable syntax highlighting
 syntax enable
-set number
-set numberwidth=2
-set autoindent
+
+" use 2 spaces for tab
+set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 set smarttab
-set expandtab
-set tabstop=2
-set shiftwidth=2
+
+" make backspace work in insert mode
 set backspace=indent,eol,start
 
-set ignorecase
-set smartcase
+" searching is case sensitive when all lowercase
+set ignorecase smartcase
+
+" highlight the search matches
 set hlsearch
-set incsearch
-" Make the search highlight disappear after \<space>
+
+" make the search highlight disappear after \<space>
 nnoremap <leader><space> :noh<cr>
+
+" show the first match as search strings are typed
+set incsearch
 
 try
   " persistent undo
@@ -57,6 +60,7 @@ set list
 " Make them look like in TextMate
 set listchars=tab:▸\ ,eol:¬
 
+" status line
 set laststatus=2
 "set statusline=%t\ %y\ format:\ %{&ff};\ [%c,%l]
 set statusline=%t       "tail of the filename
@@ -142,3 +146,18 @@ nnoremap <leader>t :NERDTreeToggle<cr>
 
 " link unnamed register with the clipboard
 set clipboard=unnamed
+
+" scroll the window when we get near the edge
+set scrolloff=4 sidescrolloff=10
+
+" no wrap long lines
+set nowrap
+
+" show line numbers
+set number numberwidth=2
+
+" match indentation of previous line
+set autoindent
+
+" perform indentaion based on filetype plugin
+filetype plugin indent on
