@@ -116,7 +116,10 @@ set exrc
 set secure
 
 " Ruby files
-autocmd BufNewFile,BufRead Gemfile,Rakefile,Guardfile  set filetype=ruby
+augroup ruby
+  autocmd!
+  autocmd BufNewFile,BufRead Gemfile,Rakefile,Guardfile  set filetype=ruby
+augroup END
 
 " Strip trailing whitespace for code files on save
 function! StripTrailingWhitespace()
@@ -124,7 +127,10 @@ function! StripTrailingWhitespace()
   %s/\s\+$//e
   call setpos('.', save_cursor)
 endfunction
-autocmd FileType ruby,yaml,javascript,css,scss,haml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+augroup trailing_whitespace
+  autocmd!
+  autocmd FileType ruby,yaml,javascript,css,scss,haml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+augroup END
 
 " dont use arrows!
 nnoremap <left> <nop>
