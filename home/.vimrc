@@ -129,7 +129,7 @@ function! StripTrailingWhitespace()
 endfunction
 augroup trailing_whitespace
   autocmd!
-  autocmd FileType ruby,yaml,javascript,css,scss,haml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+  autocmd FileType ruby,yaml,javascript,css,scss,haml,eco,coffee autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 augroup END
 
 " dont use arrows!
