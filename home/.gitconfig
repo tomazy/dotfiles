@@ -10,6 +10,7 @@
 	co = checkout
 	br = branch -a
 	logx = log --graph --decorate --oneline --all
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 [gui]
 	spellingdictionary = en
 [merge]
