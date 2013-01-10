@@ -167,3 +167,6 @@ set autoindent
 
 " perform indentaion based on filetype plugin
 filetype plugin indent on
+
+" enable matchit plugin for better % support in ruby files
+runtime macros/matchit.vim
