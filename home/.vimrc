@@ -156,9 +156,6 @@ nnoremap <leader>t :NERDTreeToggle<cr>
 " link unnamed register with the clipboard
 set clipboard=unnamed
 
-" scroll the window when we get near the edge
-set scrolloff=4 sidescrolloff=10
-
 " no wrap long lines
 set nowrap
 
