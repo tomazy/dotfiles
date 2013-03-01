@@ -143,6 +143,11 @@ inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
 
+" buffer resizing
+nnoremap <C-left> :vertical resize -2<cr>
+nnoremap <C-right> :vertical resize +2<cr>
+nnoremap <C-up> :resize -2<cr>
+nnoremap <C-down> :resize +2<cr>
 
 " flip the default split directions to sane ones
 set splitright
