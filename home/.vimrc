@@ -143,8 +143,6 @@ inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
 
-" dont use backspace! (Ctrl-H)
-inoremap <BS> <Nop>
 
 " flip the default split directions to sane ones
 set splitright
