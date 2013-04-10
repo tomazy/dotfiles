@@ -17,3 +17,5 @@
 	tool = vimdiff
 [mergetool]
 	keepbackup = false
+[push]
+	default = simple
