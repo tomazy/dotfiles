@@ -1,14 +1,24 @@
-" see: http://nvie.com/posts/how-i-boosted-my-vim/
-" see: http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 " It's Vim - not Vi
 set nocompatible
-
-" Use pathogen to easily modify the runtime path to include all
-" plugins under the ~/.vim/bundle directory
 filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+Bundle 'corntrace/bufexplorer.git'
+Bundle 'digitaltoad/vim-jade.git'
+Bundle 'kchmck/vim-coffee-script.git'
+Bundle 'kien/ctrlp.vim.git'
+Bundle 'mileszs/ack.vim.git'
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'scrooloose/syntastic.git'
+Bundle 'tpope/vim-endwise.git'
+Bundle 'tpope/vim-fugitive.git'
+Bundle 'tpope/vim-rails.git'
 
 " Prevents some security exploits
 set modelines=0
