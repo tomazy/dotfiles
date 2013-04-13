@@ -19,3 +19,5 @@
 	keepbackup = false
 [core]
 	editor = vim
+[push]
+	default = current
