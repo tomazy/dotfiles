@@ -7,6 +7,10 @@ alias ll='ls -lha'
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+command -v rbenv >/dev/null 2>&1 && eval "$(rbenv init -)"
+
 # git completion options
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUPSTREAM="auto"
