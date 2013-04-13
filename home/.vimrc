@@ -131,7 +131,7 @@ let g:netrw_dirhistmax = 100
 " Ruby files
 augroup ruby
   autocmd!
-  autocmd BufNewFile,BufRead Gemfile,Rakefile,Guardfile  set filetype=ruby
+  autocmd BufNewFile,BufRead Gemfile,Rakefile,Guardfile,Vagrantfile  set filetype=ruby
 augroup END
 
 " Strip trailing whitespace for code files on save
