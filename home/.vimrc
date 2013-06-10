@@ -19,6 +19,7 @@ Bundle 'scrooloose/syntastic.git'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'tpope/vim-fugitive.git'
 Bundle 'tpope/vim-rails.git'
+Bundle 't9md/vim-ruby-xmpfilter'
 
 " Prevents some security exploits
 set modelines=0
@@ -183,3 +184,12 @@ nnoremap <silent><Leader>c :set cursorline! cursorcolumn!<CR>
 " NERDTree
 nnoremap <silent><Leader>t :NERDTreeToggle<cr>
 nnoremap <silent><Leader>f :NERDTreeFind<cr>
+
+" xmpfilter (gem install rcodetools)
+nmap <buffer> <F5> <Plug>(xmpfilter-run)
+xmap <buffer> <F5> <Plug>(xmpfilter-run)
+imap <buffer> <F5> <Plug>(xmpfilter-run)
+
+nmap <buffer> <F4> <Plug>(xmpfilter-mark)
+xmap <buffer> <F4> <Plug>(xmpfilter-mark)
+imap <buffer> <F4> <Plug>(xmpfilter-mark)
