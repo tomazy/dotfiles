@@ -20,6 +20,8 @@ Bundle 'tpope/vim-endwise.git'
 Bundle 'tpope/vim-fugitive.git'
 Bundle 'tpope/vim-rails.git'
 Bundle 't9md/vim-ruby-xmpfilter'
+Bundle 'pangloss/vim-javascript'
+Bundle 'plasticboy/vim-markdown'
 
 " Prevents some security exploits
 set modelines=0
