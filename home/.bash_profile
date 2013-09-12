@@ -19,3 +19,5 @@ GIT_PS1_SHOWUPSTREAM="auto"
 
 # show branch name in the prompt
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+[[ -s /Users/tomazy/.nvm/nvm.sh ]] && . /Users/tomazy/.nvm/nvm.sh # This loads NVM
