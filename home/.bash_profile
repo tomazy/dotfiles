@@ -17,6 +17,9 @@ command -v rbenv >/dev/null 2>&1 && eval "$(rbenv init -)"
 # see brew
 export PATH=/usr/local/bin:$PATH
 
+# Use brew's macvim
+[[ -s /usr/local/bin/mvim ]] && alias vim='mvim -v'
+
 # git completion options
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUPSTREAM="auto"
