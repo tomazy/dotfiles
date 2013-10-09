@@ -51,7 +51,9 @@ set noswapfile
 set hidden
 
 " link unnamed register with the clipboard
-set clipboard=unnamed
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
 
 " enable syntax highlighting
 syntax enable
@@ -114,8 +116,8 @@ endif
 " Hide toolbar
 set guioptions-=T
 
-" Show vertical line at 80th column
-set colorcolumn=80
+" Show vertical line at 100th column
+set colorcolumn=100
 
 " Highlight current line and column
 hi CursorLine cterm=underline guibg=Gray20

@@ -11,6 +11,12 @@ alias ll='ls -lha'
 export PATH="$HOME/.rbenv/bin:$PATH"
 command -v rbenv >/dev/null 2>&1 && eval "$(rbenv init -)"
 
+# This loads NVM
+[[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"
+
+# see brew
+export PATH=/usr/local/bin:$PATH
+
 # git completion options
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUPSTREAM="auto"
@@ -19,5 +25,3 @@ GIT_PS1_SHOWUPSTREAM="auto"
 
 # show branch name in the prompt
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
-
-[[ -s /Users/tomazy/.nvm/nvm.sh ]] && . /Users/tomazy/.nvm/nvm.sh # This loads NVM
