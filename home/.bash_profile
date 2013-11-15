@@ -2,7 +2,9 @@
 set -o vi
 
 # Aliases
+alias ls='LC_COLLATE=C ls -F --color=auto'
 alias ll='ls -lha'
+alias tmux='tmux -2'
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
