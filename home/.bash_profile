@@ -2,7 +2,11 @@
 set -o vi
 
 # Aliases
-alias ls='LC_COLLATE=C ls -F --color=auto'
+if [ "$(uname)" == "Darwin" ]; then
+  alias ls='ls -FG'
+else
+  alias ls='LC_COLLATE=C ls -F --color=auto'
+fi
 alias ll='ls -lha'
 alias tmux='tmux -2'
 
