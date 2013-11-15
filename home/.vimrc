@@ -107,6 +107,12 @@ set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
 
 " colors
 set background=dark
+if $COLORTERM=='gnome-terminal'
+  set term=gnome-256color
+  " fix background color see:  http://sunaku.github.io/vim-256color-bce.html
+  set t_ut=
+end
+
 colorscheme base16-railscasts
 
 highlight clear SignColumn
