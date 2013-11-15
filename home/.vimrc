@@ -203,6 +203,10 @@ nnoremap <C-right> :vertical resize +2<cr>
 nnoremap <C-up> :resize -2<cr>
 nnoremap <C-down> :resize +2<cr>
 
+" unmap F1 help
+nmap <F1> :echo<CR>
+imap <F1> <C-o>:echo<CR>
+
 " make the search highlight disappear after \<space>
 nnoremap <silent><Leader><space> :noh<cr>
 
