@@ -102,6 +102,9 @@ set statusline+=%=      "left/right separator
 set statusline+=[%c,%l] "cursor column
 set statusline+=\ %P    "percent through file
 
+" put useful info in status bar
+set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
+
 " colors
 set background=dark
 colorscheme base16-railscasts
