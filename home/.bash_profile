@@ -1,6 +1,9 @@
 # Vi line edit mode
 set -o vi
 
+# ls colors for linux
+[[ -s "/usr/bin/dircolors" ]] && eval "`dircolors -b $HOME/.dircolors`"
+
 # Aliases
 if [ "$(uname)" == "Darwin" ]; then
   alias ls='ls -FG'
