@@ -37,3 +37,5 @@ GIT_PS1_SHOWUPSTREAM="auto"
 
 # show branch name in the prompt
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+export PATH="$HOME/workspace/bin:$PATH"
