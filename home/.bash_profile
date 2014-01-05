@@ -44,3 +44,6 @@ export EDITOR=vim
 
 # load tmuxinator completion
 source ~/.bin/tmuxinator.bash
+
+# make lein visible
+export PATH=$PATH:$HOME/bin
