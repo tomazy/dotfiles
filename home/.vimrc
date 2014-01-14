@@ -117,10 +117,11 @@ colorscheme base16-railscasts
 
 highlight clear SignColumn
 highlight VertSplit    ctermbg=236
-highlight ColorColumn  ctermbg=237
+highlight ColorColumn  ctermbg=236
 highlight LineNr       ctermbg=236 ctermfg=240
 highlight CursorLineNr ctermbg=236 ctermfg=240
 highlight CursorLine   ctermbg=236
+highlight CursorColumn ctermbg=236
 highlight StatusLineNC ctermbg=238 ctermfg=0
 highlight StatusLine   ctermbg=240 ctermfg=12
 highlight IncSearch    ctermbg=0   ctermfg=3
@@ -150,8 +151,8 @@ set guioptions-=T
 set colorcolumn=100
 
 " Highlight current line and column
-hi CursorLine cterm=underline guibg=Gray20
-hi CursorColumn ctermbg=0 guibg=Gray20
+" hi CursorLine guibg=Gray20
+" hi CursorColumn ctermbg=0 guibg=Gray20
 
 " NETRW options
 "  - vertical splitting for preview
