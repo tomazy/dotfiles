@@ -39,3 +39,5 @@ GIT_PS1_SHOWUPSTREAM="auto"
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 export PATH="$HOME/workspace/bin:$PATH"
+
+export EDITOR=vim
