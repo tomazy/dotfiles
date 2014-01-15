@@ -22,6 +22,7 @@ Bundle 'tpope/vim-rails.git'
 Bundle 't9md/vim-ruby-xmpfilter'
 Bundle 'pangloss/vim-javascript'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'groenewege/vim-less'
 
 " Prevents some security exploits
 set modelines=0
@@ -87,9 +88,9 @@ set number numberwidth=2
 set showmatch
 
 " Show invisible characters
-set list
+" set list
 " Make them look like in TextMate
-set listchars=tab:▸\ ,eol:¬
+" set listchars=tab:▸\ ,eol:¬
 
 " status line
 set laststatus=2
