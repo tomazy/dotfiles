@@ -1,0 +1,8 @@
+--type-add
+css=.less,.scss
+
+--type-set
+coffee=.coffee
+
+--type-set
+haml=.haml,.hamlc
