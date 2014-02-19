@@ -112,4 +112,17 @@ PATH="$PATH:/usr/local/heroku/bin"
 # dev bins
 PATH="$PATH:$HOME/workspace/bin"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# chruby
+if [ -e /usr/local/share/chruby ]; then
+  # load chruby
+  source /usr/local/share/chruby/chruby.sh
+
+  # auto switch rubies
+  source /usr/local/share/chruby/auto.sh
+
+  # set default ruby
+
+  if [ -f $HOME/.ruby-version ]; then
+    chruby `cat $HOME/.ruby-version`
+  fi
+fi
