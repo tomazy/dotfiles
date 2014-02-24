@@ -25,6 +25,7 @@ Bundle 't9md/vim-ruby-xmpfilter'
 Bundle 'pangloss/vim-javascript'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'groenewege/vim-less'
+Bundle 'thoughtbot/vim-rspec.git'
 
 " Prevents some security exploits
 set modelines=0
@@ -235,3 +236,7 @@ imap <buffer> <F5> <Plug>(xmpfilter-run)
 nmap <buffer> <F4> <Plug>(xmpfilter-mark)
 xmap <buffer> <F4> <Plug>(xmpfilter-mark)
 imap <buffer> <F4> <Plug>(xmpfilter-mark)
+
+" rspec.vim
+nnoremap <Leader>s :call RunNearestSpec()<CR>
+nnoremap <Leader>l :call RunLastSpec()<CR>
