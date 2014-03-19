@@ -186,6 +186,9 @@ augroup trailing_whitespace
   autocmd FileType ruby,yaml,javascript,css,scss,haml,eco,coffee,python,yaml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 augroup END
 
+" Enable spell check in git commit messages
+au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+
 " flip the default split directions to sane ones
 set splitright
 set splitbelow
