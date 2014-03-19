@@ -241,5 +241,6 @@ xmap <buffer> <F4> <Plug>(xmpfilter-mark)
 imap <buffer> <F4> <Plug>(xmpfilter-mark)
 
 " rspec.vim
+let g:rspec_command = 'Dispatch bin/rspec {spec}'
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
