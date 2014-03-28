@@ -9,3 +9,6 @@ haml=.haml,.hamlc
 
 --type-set
 markdown=.md,.markdown
+
+--type-set
+ejs=.ejs
