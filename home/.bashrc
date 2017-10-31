@@ -126,3 +126,5 @@ if [ -e /usr/local/share/chruby ]; then
     chruby `cat $HOME/.ruby-version`
   fi
 fi
+
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"

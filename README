@@ -1,3 +1,2 @@
-gem install homesick
+install homesick (https://github.com/andsens/homeshick)
 homesick clone tomazy/dotfiles
-homesick symlink tomazy/dotfiles
