@@ -1,31 +1,42 @@
 " It's Vim - not Vi
 set nocompatible
 filetype off
+set shell=/bin/bash
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
-Bundle 'corntrace/bufexplorer.git'
-Bundle 'digitaltoad/vim-jade.git'
-Bundle 'kchmck/vim-coffee-script.git'
-Bundle 'kien/ctrlp.vim.git'
-Bundle 'mileszs/ack.vim.git'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'scrooloose/syntastic.git'
-Bundle 'tpope/vim-endwise.git'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-commentary.git'
-Bundle 'tpope/vim-dispatch.git'
-Bundle 't9md/vim-ruby-xmpfilter'
-Bundle 'pangloss/vim-javascript'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'groenewege/vim-less'
-Bundle 'thoughtbot/vim-rspec.git'
+Plugin 'corntrace/bufexplorer.git'
+Plugin 'digitaltoad/vim-jade.git'
+Plugin 'kchmck/vim-coffee-script.git'
+Plugin 'kien/ctrlp.vim.git'
+Plugin 'mileszs/ack.vim.git'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'tpope/vim-endwise.git'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-commentary.git'
+Plugin 'tpope/vim-dispatch.git'
+Plugin 't9md/vim-ruby-xmpfilter'
+Plugin 'pangloss/vim-javascript'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'groenewege/vim-less'
+Plugin 'thoughtbot/vim-rspec.git'
+Plugin 'benmills/vimux'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'chriskempson/base16-vim'
+Plugin 'lambdatoast/elm.vim'
+Plugin 'toyamarinyon/vim-swift'
+Plugin 'eraserhd/vim-ios'
+Plugin 'mxw/vim-jsx'
+Plugin 'vimwiki/vimwiki.git'
+Plugin 'reedes/vim-pencil'
 
 " Prevents some security exploits
 set modelines=0
@@ -117,23 +128,7 @@ if $COLORTERM=='gnome-terminal'
   set t_ut=
 end
 
-colorscheme base16-railscasts
-
-highlight clear SignColumn
-highlight VertSplit    ctermbg=236
-highlight ColorColumn  ctermbg=236
-highlight LineNr       ctermbg=236 ctermfg=240
-highlight CursorLineNr ctermbg=236 ctermfg=240
-highlight CursorLine   ctermbg=236
-highlight CursorColumn ctermbg=236
-highlight StatusLineNC ctermbg=238 ctermfg=0
-highlight StatusLine   ctermbg=240 ctermfg=12
-highlight IncSearch    ctermbg=0   ctermfg=3
-highlight Search       ctermbg=0   ctermfg=9
-highlight Visual       ctermbg=3   ctermfg=0
-highlight Pmenu        ctermbg=240 ctermfg=12
-highlight PmenuSel     ctermbg=0   ctermfg=3
-highlight SpellBad     ctermbg=0   ctermfg=1
+colorscheme Tomorrow-Night
 
 " highlight the status bar when in insert mode
 if version >= 700
@@ -244,3 +239,25 @@ imap <buffer> <F4> <Plug>(xmpfilter-mark)
 let g:rspec_command = 'Dispatch bin/rspec {spec}'
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
+
+let g:instant_markdown_slow = 1
+
+" http://www.drbunsen.org/writing-in-vim/
+func! WordProcessorMode()
+  setlocal formatoptions=1
+  setlocal noexpandtab
+  map j gj
+  map k gk
+  setlocal spell spelllang=en_us
+  set complete+=kspell
+  set formatprg=par
+  setlocal wrap
+  setlocal linebreak
+endfu
+com! WP call WordProcessorMode()
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
+
+" https://superuser.com/a/907889
+autocmd filetype crontab setlocal nobackup nowritebackup

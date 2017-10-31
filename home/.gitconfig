@@ -3,7 +3,7 @@
 	diff = auto
 	status = auto
 [user]
-	name = Tomek Maszkowski
+	name = tomazy
 	email = tomazy@go2.pl
 [alias]
 	st = status -sb
@@ -11,6 +11,7 @@
 	br = branch -a
 	logx = log --graph --decorate --oneline --all
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	lg = graph = log --graph --all --decorate --stat --date=iso
 [gui]
 	spellingdictionary = en
 [merge]
@@ -19,5 +20,7 @@
 	keepbackup = false
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
 	default = current
