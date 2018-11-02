@@ -127,4 +127,7 @@ if [ -e /usr/local/share/chruby ]; then
   fi
 fi
 
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+# homeshick
+if [ -e  "$HOME/.homesick/repos/homeshick/homeshick.sh" ]; then
+  source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+fi
