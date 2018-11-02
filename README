@@ -1,2 +1,2 @@
-install homesick (https://github.com/andsens/homeshick)
-homesick clone tomazy/dotfiles
+1. Install homeshick (https://github.com/andsens/homeshick)
+2. homesick clone tomazy/dotfiles
