@@ -131,3 +131,8 @@ fi
 if [ -e  "$HOME/.homesick/repos/homeshick/homeshick.sh" ]; then
   source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fi
+
+# gem_home
+if [ -e /usr/local/share/gem_home/gem_home.sh ]; then
+  source /usr/local/share/gem_home/gem_home.sh
+fi
