@@ -2,8 +2,6 @@
 	branch = auto
 	diff = auto
 	status = auto
-[user]
-	name = Tomek Maszkowski
 [alias]
 	st = status -sb
 	co = checkout
