@@ -13,7 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'corntrace/bufexplorer.git'
 Plugin 'digitaltoad/vim-jade.git'
 Plugin 'kchmck/vim-coffee-script.git'
-Plugin 'kien/ctrlp.vim.git'
+Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'mileszs/ack.vim.git'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/syntastic.git'
@@ -37,6 +37,7 @@ Plugin 'toyamarinyon/vim-swift'
 Plugin 'mxw/vim-jsx'
 Plugin 'vimwiki/vimwiki.git'
 Plugin 'reedes/vim-pencil'
+Plugin 'rizzatti/dash.vim'
 
 " Prevents some security exploits
 set modelines=0
@@ -261,3 +262,6 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 " https://superuser.com/a/907889
 autocmd filetype crontab setlocal nobackup nowritebackup
+
+" ctrlp ignore
+set wildignore+=*/log/*,*/tmp/*,*/node_modules/*
