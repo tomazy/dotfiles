@@ -1,2 +1,14 @@
 1. Install homeshick (https://github.com/andsens/homeshick)
 2. homesick clone tomazy/dotfiles
+
+
+### Zsh
+
+`brew install zsh zsh-completions zsh-history-substring-search`
+`echo $(which zsh) | sudo tee -a /etc/shells`
+`chsh -s $(which zsh)`
+
+`npm install --global pure-prompt`
+
+`chmod g-w /usr/local/share # on macOS`
+

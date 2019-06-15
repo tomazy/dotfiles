@@ -69,12 +69,10 @@ xterm*|rxvt*)
     ;;
 esac
 
-
 # Aliases shared between Bash and Zsh
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
-
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -121,4 +119,18 @@ fi
 # gem_home
 if [ -e /usr/local/share/gem_home/gem_home.sh ]; then
   source /usr/local/share/gem_home/gem_home.sh
+fi
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+if type brew 2&>/dev/null; then
+  source $(brew --prefix)/etc/bash_completion.d/*
+else
+  echo "run: brew install git bash-completion"
 fi
