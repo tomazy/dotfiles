@@ -3,15 +3,15 @@
 	diff = auto
 	status = auto
 [user]
-	name = tomazy
-	email = tomazy@go2.pl
+	name = Tomek Maszkowski
 [alias]
 	st = status -sb
 	co = checkout
-	br = branch -a
+	br = branch -a --sort=-committerdate
 	logx = log --graph --decorate --oneline --all
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	graph = log --graph --all --decorate --stat --date=iso
+  cp = cherry-pick
 [gui]
 	spellingdictionary = en
 [merge]
