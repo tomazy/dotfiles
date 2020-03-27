@@ -22,7 +22,7 @@ Plugin 'tpope/vim-fugitive.git'
 Plugin 'tpope/vim-rails.git'
 Plugin 'tpope/vim-commentary.git'
 Plugin 'tpope/vim-dispatch.git'
-Plugin 't9md/vim-ruby-xmpfilter'
+" Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'groenewege/vim-less'
@@ -38,6 +38,8 @@ Plugin 'mxw/vim-jsx'
 Plugin 'vimwiki/vimwiki.git'
 Plugin 'reedes/vim-pencil'
 Plugin 'rizzatti/dash.vim'
+Plugin 'ledger/vim-ledger'
+Plugin 'nathangrigg/vim-beancount'
 
 " Prevents some security exploits
 set modelines=0
@@ -179,7 +181,7 @@ endfunction
 
 augroup trailing_whitespace
   autocmd!
-  autocmd FileType ruby,yaml,javascript,css,scss,haml,eco,coffee,python,yaml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+  autocmd FileType ruby,yaml,javascript,css,scss,haml,eco,coffee,python,yaml,yml,beancount autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 augroup END
 
 " Enable spell check in git commit messages
@@ -227,14 +229,9 @@ nnoremap <silent><Leader>c :set cursorline! cursorcolumn!<CR>
 nnoremap <silent><Leader>t :NERDTreeToggle<cr>
 nnoremap <silent><Leader>f :NERDTreeFind<cr>
 
-" xmpfilter (gem install rcodetools)
-nmap <buffer> <F5> <Plug>(xmpfilter-run)
-xmap <buffer> <F5> <Plug>(xmpfilter-run)
-imap <buffer> <F5> <Plug>(xmpfilter-run)
-
-nmap <buffer> <F4> <Plug>(xmpfilter-mark)
-xmap <buffer> <F4> <Plug>(xmpfilter-mark)
-imap <buffer> <F4> <Plug>(xmpfilter-mark)
+" Insert current date
+nnoremap <F5> "=strftime('%Y-%m-%d')<CR>p
+inoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
 
 " rspec.vim
 let g:rspec_command = 'Dispatch bin/rspec {spec}'
